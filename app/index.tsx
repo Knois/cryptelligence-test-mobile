@@ -2,15 +2,15 @@ import AddButton from '@/components/buttons/AddButton';
 import List from '@/components/general/List';
 
 import { observer } from 'mobx-react-lite';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, KeyboardAvoidingView, StyleSheet, Text } from 'react-native';
 
 import { Dimensions } from 'react-native';
 
-const { width, height } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 const HomeScreen = () => {
 	return (
-		<View style={styles.screen}>
+		<KeyboardAvoidingView style={styles.screen} behavior='height'>
 			<Text style={styles.title}>My To-Do</Text>
 
 			<List />
@@ -36,7 +36,7 @@ const HomeScreen = () => {
 				style={styles.imgFour}
 				source={require('../assets/images/Ellipse 3.png')}
 			/>
-		</View>
+		</KeyboardAvoidingView>
 	);
 };
 
@@ -52,6 +52,15 @@ const styles = StyleSheet.create({
 		paddingTop: 28,
 		paddingBottom: 35,
 		position: 'relative',
+	},
+
+	keyboardAvoidingView: {
+		flex: 1,
+		width: '100%',
+		position: 'relative',
+		flexDirection: 'column',
+		alignItems: 'center',
+		justifyContent: 'flex-start',
 	},
 
 	title: {
