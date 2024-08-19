@@ -27,7 +27,7 @@ Make sure you have the following tools installed on your machine:
    Clone the repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/your-repo/cryptelligence-test-mobile.git
+   git clone https://github.com/Knois/cryptelligence-test-mobile.git
    ```
 
 2. **Navigate to the Project Directory**
